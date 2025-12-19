@@ -11,10 +11,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-:where(:focus-visible, :target) {
-  scroll-margin-block: max(8vb, 1rem);
-}
-
 :where(.visually-hidden:not(:focus, :focus-within, :active)) {
   inline-size: 1px !important;
   block-size: 1px !important;

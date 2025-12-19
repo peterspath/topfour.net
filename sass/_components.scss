@@ -1,44 +1,63 @@
-svg {
-  max-inline-size: 0.85em;
-  max-block-size: 0.85em;
-  fill: currentColor;
+section {
+  margin-top: 20px;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: left;
 }
 
-.people-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: [image-start] 48px [image-end name-start] auto [name-end page-start] 1fr [page-end];
-  align-items: center;
-  column-gap: 1rem;
-  row-gap: 1.5rem;
-  padding: 0;
-  margin-block: 2.5rem;
-  word-wrap: anywhere;
+section a.card {
+  display: block;
+  background: var(--color-bg-light);
+  border-radius: 12px;
+  padding: 12px 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-  li {
-	display: contents;
+section a.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
 
-	.image {
-	  max-inline-size: 100%;
-	  height: auto;
-	  grid-column: image;
-	  display: grid;
-	  place-items: center;
-	  font-size: 2em;
-	}
+section a.card h3, section a.card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
-	.name {
-	  max-inline-size: min(25ch, 30vi);
-	  grid-column: name;
-	  font-weight: bold;
-	}
+section a.card h3 {
+  margin: 0 0 8px 0;
+  font-size: var(--font-size-1);
+}
 
-	.page {
-	  grid-column: page;
-	}
+section a.card p {
+  font-size: var(--font-size-0);
+  margin-bottom: 2px !important;
+}
 
-	.cta {
-	  grid-column: name / page;
-	}
+section a.card p strong {
+  font-weight: bold;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  section a.card {
+	background-color: var(--color-bg-dark);
+	color: var(--color-light);
   }
+}
+
+@media (max-width: 440px) {
+	section a.card  {
+		flex: 1 1 100%;
+		max-width: 100%;
+		white-space: normal;
+	}
 }

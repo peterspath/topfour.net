@@ -1,40 +1,32 @@
 :is(header, main, footer) {
   max-inline-size: 800px;
   margin-inline: auto;
-  padding-inline: 1em;
+  padding-inline: 20px;
 }
 
 :is(header, footer) {
-  padding-block: 3rem;
+  padding-block: 24px;
 }
 
 header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 2rem;
+  gap: 24px;
   border-block-end: 2px solid currentColor;
-  margin-block-end: 3rem;
-
-  img {
-	image-rendering: pixelated;
-  }
+  margin-block-end: 24px;
 }
 
 main {
-  padding-block-end: 3rem;
+  padding-block-end: 24px;
 }
 
 footer {
-  margin-block-start: 3rem;
+  margin-block-start: 20px;
   border-block-start: 2px solid currentColor;
   text-align: center;
 
   p {
 	max-inline-size: initial;
   }
-}
-
-.flow > * + * {
-  margin-block-start: 1em;
 }

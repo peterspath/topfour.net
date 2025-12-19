@@ -14,15 +14,11 @@ body {
 a {
   color: var(--color-anchor-dark);
   text-decoration-skip-ink: auto;
-  text-underline-offset: 0.125em;
+  text-underline-offset: 2px;
   transition: all 0.2s ease;
 
   &:is(:hover, :focus, :active) {
 	text-decoration-thickness: 2px;
-  }
-
-  &:focus-visible {
-	outline-color: var(--color-maple);
   }
 }
 

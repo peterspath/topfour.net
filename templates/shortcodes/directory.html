@@ -1,0 +1,15 @@
+{%- set data = load_data(path="data/data.json", format="json") -%}
+{%- set sorted_data = data | sort(attribute="name", reverse=false) -%} 
+
+<section>
+{%- for item in sorted_data -%}
+	<a href="{{ item.url }}" title="Top 4 page of {{ item.name }}" class="card">
+		<h3>{{ item.name }}</h3>
+		<p>{{ item.emoji }} <strong class="category">{{ item.category }}</strong></p>
+		<p>1. {{ item.number1 }}</p>
+		<p>2. {{ item.number2 }}</p>
+		<p>3. {{ item.number3 }}</p>
+		<p>4. {{ item.number4 }}</p>
+	</a>
+{%- endfor -%}
+</section>

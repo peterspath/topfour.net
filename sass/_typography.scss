@@ -11,95 +11,88 @@ h2 {
 }
 
 p {
-  max-inline-size: clamp(21em, 100vi, 30em);
   text-wrap: pretty;
-}
-
-:is(abbr, dfn) {
-  font-style: italic;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-}
-
-blockquote {
-  inline-size: fit-content;
-  background-color: color-mix(in oklab, #000, transparent 90%);
-  padding: 1em;
-  border-radius: 2px;
-
-  p::before {
-	content: open-quote;
-  }
-
-  p:not(:last-of-type)::after {
-	opacity: 0;
-  }
-
-  p::after {
-	content: close-quote;
-  }
+  margin-bottom: 16px;
 }
 
 hr {
   background-color: currentColor;
-  inline-size: 100%;
-  max-inline-size: 20ch;
   block-size: 2px;
   display: block;
   border: 0;
-  margin: 2.5rem auto !important;
-  overflow: visible;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  overflow:visible
 }
 
 pre {
-  background-color: color-mix(in oklab, #000, transparent 90%);
-  max-inline-size: clamp(21em, 100vi, 30em);
-  border-radius: 2px;
-
-  code {
-	display: block;
-	padding: 1em;
-	white-space: pre-wrap;
-	word-break: normal;
-	word-spacing: normal;
-	word-wrap: normal;
-	font-size: 1rem;
-	user-select: all;
-
-	&:focus {
-	  animation: selectall 0.2s step-end forwards;
-	}
-  }
+    background-color: color-mix(in oklab, #000, transparent 90%);
+    max-inline-size: clamp(21em, 100vi, 30em);
+    border-radius:2px
 }
 
-code {
-  font-size: 0.85em;
+pre code {
+    display: block;
+    padding: 1em;
+    white-space: pre-wrap;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    font-size: 1rem;
+    user-select:all
 }
 
-:is(ol, ul) {
-  padding-inline-start: 1em;
+pre code:focus {
+    animation:selectall 0.2s step-end forwards
+}
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: left;
+}
+
+li {
+    flex: 1 1 auto;
+    width: fit-content;
+    min-width: 0;
+    max-width: fit-content;
+    border-radius: 12px;
+    padding: 4px 8px;
+    background-color: var(--color-bg-light);
+    text-align: center;
+    font-size: var(--font-size-0);
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+ul a li  {
+  text-decoration: none !important;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
   li {
-	padding-inline-start: 1em;
-
-	&::marker {
-	  font-weight: bold;
-	}
+    background-color: var(--color-bg-dark);
+    color: var(--color-light);
   }
 }
 
-ol {
-  counter-reset: ordered-list;
-
-  li {
-	counter-increment: ordered-list;
-
-	&::marker {
-	  content: counter(ordered-list) ".";
-	}
-  }
-}
-
-ul li::marker {
-  content: "·";
+@media (max-width: 440px) {
+    li {
+        flex: 1 1 100%;
+        max-width: 100%;
+        white-space: normal;
+    }
 }
