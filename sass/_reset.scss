@@ -1,0 +1,29 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:where(body) {
+  inline-size: 100%;
+  min-block-size: 100vb;
+  min-block-size: 100dvb;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(:focus-visible, :target) {
+  scroll-margin-block: max(8vb, 1rem);
+}
+
+:where(.visually-hidden:not(:focus, :focus-within, :active)) {
+  inline-size: 1px !important;
+  block-size: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+}

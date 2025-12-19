@@ -6,17 +6,6 @@
 	<meta name="keywords" content="{{  config.extra.tags }}" />
 	<meta name="author" content="{{ config.author }}" />
 	<link rel="canonical" href="{{ config.base_url | safe }}" />
-	{%- if config.generate_feeds and config.feed_filenames %}
-		{% for feed in config.feed_filenames %}
-			{% if feed == "atom.xml" %}
-	<link rel="alternate" type="application/atom+xml" title="{{ config.title }} - Atom Feed" href="{{ get_url(path=feed) | safe }}">
-			{% elif feed == "rss.xml" %}
-	<link rel="alternate" type="application/rss+xml" title="{{ config.title }} - RSS Feed" href="{{ get_url(path=feed) | safe }}">
-			{% else %}
-	<link rel="alternate" href="{{ get_url(path=feed) | safe }}">
-			{% endif %}
-		{% endfor %}
-	{% endif %}
 	<link rel="preload" href="{{ get_url(path='style.css') | safe }}" as="style">
 	{%- set styles = [ "style.css" ] %}
 	{%- for style in styles %}
@@ -30,7 +19,7 @@
 	<meta property="og:description" content="{{  config.description }}" />
 	<meta property="og:url" content="{{ config.base_url | safe }}" />
 	<meta property="og:type" content="website" />
-	<meta property="og:locale" content="en_GB" />
+	<meta property="og:locale" content="en" />
 	<meta property="og:site_name" content="{{ config.title }}" />
 	<meta property="og:image" content="{{ config.extra.socialimage | safe }}" />
 	<meta property="article:tag" content="{{ config.extra.tags }}" />
@@ -54,12 +43,12 @@
 	  "headline": "{{ config.title }}",
 	  "description": "{{  config.description }}",
 	  "url": "{{ config.base_url | safe }},
-	  "inLanguage": "en-GB",
+	  "inLanguage": "en",
 	  "publisher": {
 		"@type": "Person",
 		"name": "{{ config.title | safe }}",
 		"url": "{{ config.base_url | safe }}",
-		"image": "https://topfour.net/image/topfour-logo-round.png",
+		"image": "https://topfour.net/image/top-four-logo.png",
 		"sameAs": [
 			"https://x.com/topfour_net",
 			"https://bsky.app/profile/topfour.net",

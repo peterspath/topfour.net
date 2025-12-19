@@ -1,0 +1,105 @@
+h1 {
+  font-size: var(--font-size-3);
+}
+
+h2 {
+  font-size: var(--font-size-2);
+}
+
+* + h2 {
+  margin-block-start: 3rem;
+}
+
+p {
+  max-inline-size: clamp(21em, 100vi, 30em);
+  text-wrap: pretty;
+}
+
+:is(abbr, dfn) {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+blockquote {
+  inline-size: fit-content;
+  background-color: color-mix(in oklab, #000, transparent 90%);
+  padding: 1em;
+  border-radius: 2px;
+
+  p::before {
+	content: open-quote;
+  }
+
+  p:not(:last-of-type)::after {
+	opacity: 0;
+  }
+
+  p::after {
+	content: close-quote;
+  }
+}
+
+hr {
+  background-color: currentColor;
+  inline-size: 100%;
+  max-inline-size: 20ch;
+  block-size: 2px;
+  display: block;
+  border: 0;
+  margin: 2.5rem auto !important;
+  overflow: visible;
+}
+
+pre {
+  background-color: color-mix(in oklab, #000, transparent 90%);
+  max-inline-size: clamp(21em, 100vi, 30em);
+  border-radius: 2px;
+
+  code {
+	display: block;
+	padding: 1em;
+	white-space: pre-wrap;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+	font-size: 1rem;
+	user-select: all;
+
+	&:focus {
+	  animation: selectall 0.2s step-end forwards;
+	}
+  }
+}
+
+code {
+  font-size: 0.85em;
+}
+
+:is(ol, ul) {
+  padding-inline-start: 1em;
+
+  li {
+	padding-inline-start: 1em;
+
+	&::marker {
+	  font-weight: bold;
+	}
+  }
+}
+
+ol {
+  counter-reset: ordered-list;
+
+  li {
+	counter-increment: ordered-list;
+
+	&::marker {
+	  content: counter(ordered-list) ".";
+	}
+  }
+}
+
+ul li::marker {
+  content: "·";
+}

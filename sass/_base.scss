@@ -1,0 +1,33 @@
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-size: var(--font-size-0);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+	background-color: var(--color-dark);
+	color: var(--color-light);
+  }
+}
+
+a {
+  color: var(--color-anchor-dark);
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.125em;
+  transition: all 0.2s ease;
+
+  &:is(:hover, :focus, :active) {
+	text-decoration-thickness: 2px;
+  }
+
+  &:focus-visible {
+	outline-color: var(--color-maple);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+	color: var(--color-anchor-light);
+  }
+}
