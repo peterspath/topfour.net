@@ -13,6 +13,8 @@ Inspired by the fun, opinionated style of ranking things in fours, it allows you
 
 You can add a **/top4** page to your personal website as a lightweight and engaging way to share more about yourself beyond the usual /about or /now pages.
 
+Read also the [announcement here](https://peterspath.net/blog/project-topfour/).
+
 ---
 
 
@@ -24,7 +26,7 @@ You can add a **/top4** page to your personal website as a lightweight and engag
 
 ## Add or remove your /top4 page?
 
-If you have an account on [GitHub](https://github.com), please [follow the steps](https://github.com/peterspath/topfour.net) in the readme. If not, or if you run into any issues, feel free to [reach out](mailto:hi@topfour.net) to me.
+If you have an account on GitHub, please [follow the steps](https://github.com/peterspath/topfour.net) in the readme. If not, or if you run into any issues, feel free to [reach out](mailto:hi@topfour.net) to me.
 
 If for any reason you wish to remove your **/top4** page from the directory, you can follow the [same steps](https://github.com/peterspath/topfour.net) from the readme, but instead of *adding* a new line to data file, *delete* your respective line from the data file.
 
