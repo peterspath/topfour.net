@@ -1,5 +1,13 @@
 # Top Four
 
+A /top4 page is a personal webpage where you can share your definitive ranked list of your top 3 favorites and an honorable mention. In a specific topic, such as movies, albums, snacks, games, or anything else you feel strongly about. Read also the [announcement here](https://peterspath.net/blog/project-top-four/).
+
+Inspired by the fun, opinionated style of ranking things in fours, it allows you to express your tastes clearly and concisely while inviting discussion and debate.
+
+You can add a /top4 page to your personal website as a lightweight and engaging way to share more about yourself beyond the usual /about or /now pages.
+
+## Instructions
+
 ### 1. Go to the data file
 
 [Go to data file...](https://github.com/peterspath/topfour.net/blob/main/data/data.json)
@@ -34,7 +42,7 @@ GitHub will then prompt you to create a Pull Request against the original reposi
 
 ### 6. Review
 
-Submissions will be reviewed as quickly as possible, and when your Pull Request is merged, your website will appear in the directory above!
+Submissions will be reviewed as quickly as possible, and when your Pull Request is merged, your website will appear in the [directory](https://topfour.net/)!
 
 *We reserve the right to refuse any site we deem to be inappropriate. Basically, if you wouldn't show it to your grandma or your kids, you're probably not going to get accepted.*
 
