@@ -29,11 +29,8 @@
 	<meta name="twitter:title" content="{{ config.title }}" />
 	<meta name="twitter:description" content="{{  config.description }}" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:creator" content="@topfour_net" />
 	<meta name="twitter:image" content="{{ config.extra.socialimage | safe }}" />
 	
-	<!-- Mastodon -->
-	<meta name="fediverse:creator" content="@topfour@mastodon.social">
 	
 	<!-- Schema.org JSON-LD -->
 	<script type="application/ld+json">
@@ -48,13 +45,7 @@
 		"@type": "Person",
 		"name": "{{ config.title | safe }}",
 		"url": "{{ config.base_url | safe }}",
-		"image": "https://topfour.net/image/top-four-logo.png",
-		"sameAs": [
-			"https://x.com/topfour_net",
-			"https://bsky.app/profile/topfour.net",
-			"https://mastodon.social/@topfour"
-		  ],
-		"image": "{{ config.extra.socialimage | safe }}"
+		"image": "https://topfour.net/image/top-four-logo.png"
 	}
 	</script>
 </head>
